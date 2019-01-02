@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="http://d3plus.org/js/d3.js"></script>
+<script src="http://d3plus.org/js/d3plus.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+<script type="text/javascript" src="./uslifeexpectancy.json"></script>
+
+<div id="viz"></div>
+
+<script>
+
+  //var data = [{"value": 65259, "name": "White"}, {"value": 11589, "name": "Black"}, {"value": 159, "name": "American Indian or Alaska Native"}, {"value": 15849, "name": "Asian or Pacific Islander"}, {"value": 7974, "name": "Hispanic"}, {"value": 4332, "name": "Other Non-Hispanic"}]
+  d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+    .id("gender")
+    .x("year")
+    .y("life expectancy at birth (years)")
+    .draw()
+
+</script>
